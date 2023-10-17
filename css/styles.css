@@ -79,7 +79,17 @@ h3 {
 }
 
 button {
+	font-family: inherit;
+	color: currentColor;
 	cursor: pointer;
+}
+
+input {
+	font-family: inherit;
+}
+
+textarea {
+	resize: none;
 }
 
 img {
@@ -598,6 +608,8 @@ img {
 .btn-footer {
 	display: flex;
 	align-items: center;
+	font-weight: 500;
+	letter-spacing: 0.04em;
 	max-width: 165px;
 	height: 40px;
 	padding: 8px 24px;
@@ -618,4 +630,118 @@ img {
 
 .footer-icon {
 	fill: #ffffff;
+}
+
+/* MODAL============================================ */
+
+.form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	padding: 72px 24px 24px 24px;
+	max-width: 408px;
+	border-radius: 4px;
+	background-color: #fcfcfc;
+}
+
+.modal-close-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	width: 24px;
+	height: 24px;
+	padding: 6px;
+
+	border: 1px solid #0000001a;
+	border-radius: 50%;
+	background-color: rgba(231, 233, 252, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-x {
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:focus .icon-x,
+.modal-close-btn:hover .icon-x {
+	fill: #ffffff;
+}
+
+.modal-close-btn:focus,
+.modal-close-btn:hover {
+	background-color: #404bbf;
+}
+
+.form-text {
+	align-self: center;
+	font-weight: 500;
+	margin-bottom: 16px;
+}
+
+.form-input {
+	
+	width: 360px;
+	height: 40px;
+	border-radius: 4px;
+	border: 1px solid #2e2f4266;
+	margin-top: 4px;
+	padding: 11px 38px;
+}
+
+
+.form-input:focus,
+.form-input:hover {
+	border-color: #4d5ae5;
+}
+
+.form-input:hover .form-icon,
+.form-input:focus .form-icon {
+	fill: #4d5ae5;
+}
+
+.icon-modal {
+	position: absolute;
+	top: 26px;
+	left:16px;
+}
+
+.form-label {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.04em;
+
+	color: #8e8f99;
+	margin-bottom: 8px;
+}
+
+.modal-btn {
+	width: 169px;
+	padding: 16px 32px;
+	align-self: center;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+
+	border: none;
+	border-radius: 4px;
+	color: #ffffff;
+	background-color: #4d5ae5;
+}
+
+.form-textarea {
+	padding: 8px 16px;
+}
+
+textarea::placeholder {
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.04em;
+	color: #2E2F4266;
 }
