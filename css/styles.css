@@ -749,14 +749,6 @@ img {
 	/* margin-bottom: 8px; */
 }
 
-/* .form-label:not(:last-child) {
-	margin-bottom: 8px;
-} */
-
-/* .last {
-	margin-bottom: 16px;
-} */
-
 .modal-btn {
 	width: 169px;
 	padding: 16px 32px;
@@ -788,4 +780,12 @@ textarea::placeholder {
 	letter-spacing: 0.04em;
 	color: #2E2F4266;
 
+}
+
+.checkbox-label {
+	display: flex;
+}
+
+.last-input {
+	margin-right: 8px;
 }
