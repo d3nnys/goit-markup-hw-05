@@ -419,7 +419,7 @@
 						Subscribe
 						<input class="footer-input" type="email" name="email" placeholder="E-mail" />
 					</label>
-					<button class="btn-footer" type="button">
+					<button class="btn-footer" type="submit">
 						Subscribe
 						<svg class="footer-icon" width="24" height="24">
 							<use href="./images/icons.svg#icon-telegram"></use>
@@ -429,7 +429,7 @@
 			</div>
 		</footer>
 	</body>
-	<div class="backdrop is-hidden">
+	<div class="backdrop is-open">
 		<form class="form" name="modal" autocomplete="off" action="">
 			<button class="modal-close-btn" type="button">
 				<svg class="icon-x" width="8" height="8">
@@ -470,8 +470,9 @@
 				></textarea>
 			</label>
 			<div class="box-box">
-				<label class="checkbox-label" for="text">
-					<input class="last-input" name="text" type="checkbox" required />
+				<label class="checkbox-label" for="privacy">
+					<input class="last-input vissually visually-hidden" name="text" type="checkbox" id="privacy" required />
+					<span class="custom-input"></span>
 					<p class="form-second-text">
 						I accept the terms and conditions of the <a class="form-link" href="">Privacy Policy</a>
 					</p>

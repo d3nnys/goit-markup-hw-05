@@ -643,12 +643,14 @@ img {
 	height: 100%;
 
 	background: rgba(46, 47, 66, 0.4);
-}
-
-.backdrop.is-hidden {
 	opacity: 0;
 	pointer-events: none;
 }
+
+/* .backdrop.is-open {
+	opacity: 1;
+	pointer-events: all;
+} */
 
 .form {
 	position: absolute;
@@ -724,7 +726,7 @@ img {
 	letter-spacing: 0.04em;
 	color: #4d5ae5;
 	text-decoration: underline;
-	text-underline-position: under;
+	/* text-underline-position: under; */
 }
 
 .form-input {
@@ -738,12 +740,12 @@ img {
 	margin-bottom: 8px;
 }
 
-.form-input:focus {
-	border-color: #4d5ae5;
+
+.form-label:focus-within .form-input {
+	color: #4D5AE5;
 }
 
 .form-label:focus-within .icon-modal {
-	color: #4d5ae5;
 	fill: #4d5ae5;
 }
 
@@ -760,7 +762,7 @@ img {
 	font-size: 12px;
 	line-height: 1.17;
 	letter-spacing: 0.04em;
-
+	
 	color: #8e8f99;
 }
 
@@ -770,12 +772,12 @@ img {
 	align-self: center;
 	font-weight: 500;
 	letter-spacing: 0.04em;
-
+	
 	border: none;
 	border-radius: 4px;
 	color: #ffffff;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-
+	
 	background-color: #4d5ae5;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -803,6 +805,57 @@ textarea::placeholder {
 	display: flex;
 }
 
-.last-input {
+.custom-input {
+	position: relative;
+	display: inline-block;
+
+	width: 16px;
+	height: 16px;
 	margin-right: 8px;
+	border: 1px solid #2E2F4266;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.custom-input::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 114.3%;
+	height: 114.3%;
+	background-color: #404BBF;
+	border-radius: 2px;
+	
+	transform: translate(-50%, -50%) scale(0);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 1;
+}
+
+.custom-input::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	
+	display: inline-block;
+	width: 10px;
+	height: 8px;
+	border: none;
+	background-image: url(../images/check.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+
+
+.last-input:checked + .custom-input::after {
+	transform: translate(-50%, -50%) scale(1);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.last-input:checked + .custom-input::before {
+	transform: translate(-50%, -50%) scale(1);
+	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
