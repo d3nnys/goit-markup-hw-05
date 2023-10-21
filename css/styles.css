@@ -36,7 +36,7 @@ body {
 }
 
 ul,
-li {
+ol {
 	list-style-type: none;
 }
 
@@ -647,10 +647,10 @@ img {
 	pointer-events: none;
 }
 
-/* .backdrop.is-open {
+.backdrop.is-open {
 	opacity: 1;
 	pointer-events: all;
-} */
+}
 
 .form {
 	position: absolute;
@@ -673,7 +673,7 @@ img {
 	width: 24px;
 	height: 24px;
 	padding: 6px;
-	
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -740,9 +740,8 @@ img {
 	margin-bottom: 8px;
 }
 
-
 .form-label:focus-within .form-input {
-	color: #4D5AE5;
+	color: #4d5ae5;
 }
 
 .form-label:focus-within .icon-modal {
@@ -762,7 +761,7 @@ img {
 	font-size: 12px;
 	line-height: 1.17;
 	letter-spacing: 0.04em;
-	
+
 	color: #8e8f99;
 }
 
@@ -772,12 +771,12 @@ img {
 	align-self: center;
 	font-weight: 500;
 	letter-spacing: 0.04em;
-	
+
 	border: none;
 	border-radius: 4px;
 	color: #ffffff;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-	
+
 	background-color: #4d5ae5;
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -812,34 +811,34 @@ textarea::placeholder {
 	width: 16px;
 	height: 16px;
 	margin-right: 8px;
-	border: 1px solid #2E2F4266;
+	border: 1px solid #2e2f4266;
 	border-radius: 2px;
 	cursor: pointer;
 }
 
 .custom-input::after {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 114.3%;
 	height: 114.3%;
-	background-color: #404BBF;
+	background-color: #404bbf;
 	border-radius: 2px;
-	
+
 	transform: translate(-50%, -50%) scale(0);
 	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	z-index: 1;
 }
 
 .custom-input::before {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	
+
 	display: inline-block;
 	width: 10px;
 	height: 8px;
@@ -850,11 +849,11 @@ textarea::placeholder {
 	z-index: 2;
 }
 
-
 .last-input:checked + .custom-input::after {
 	transform: translate(-50%, -50%) scale(1);
 	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .last-input:checked + .custom-input::before {
 	transform: translate(-50%, -50%) scale(1);
 	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
