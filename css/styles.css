@@ -647,10 +647,10 @@ img {
 	pointer-events: none;
 }
 
-.backdrop.is-open {
+/* .backdrop.is-open {
 	opacity: 1;
 	pointer-events: all;
-}
+} */
 
 .form {
 	position: absolute;
@@ -851,10 +851,10 @@ textarea::placeholder {
 
 .last-input:checked + .custom-input::after {
 	transform: translate(-50%, -50%) scale(1);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .last-input:checked + .custom-input::before {
 	transform: translate(-50%, -50%) scale(1);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
