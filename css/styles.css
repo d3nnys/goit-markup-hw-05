@@ -576,45 +576,61 @@ img {
 	margin-right: 80px;
 }
 
-.footer-label {
-	display: flex;
-	flex-direction: column;
-	font-weight: 500;
-
-	color: #ffffff;
+.footer-mail-container {
+	/* display: flex;
+	align-items: end;
+	gap: 24px; */
 }
 
-.mail-container {
+.footer-mail-text {
+	font-weight: 500;
+	color: #ffffff;
+	margin-bottom: 16px;
+}
+
+.footer-form {
 	display: flex;
-	align-items: end;
+}
+
+.footer-form-label {
+	display: flex;
 	gap: 24px;
 }
 
-.footer-input {
+.footer-form-input {
 	width: 264px;
 	height: 40px;
-	padding: 8px 16px;
-	margin-top: 16px;
+	padding-left: 16px;
 
 	border: 1px solid #ffffff;
 	border-radius: 4px;
+	background-color: transparent;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 	color: #ffffff;
-	background-color: #2e2f42;
+
+	font-size: 12px;
+	letter-spacing: 0.04em;
 }
 
-.footer-input::placeholder {
+.footer-form-input::placeholder {
 	color: #ffffff;
 }
 
-.btn-footer {
+.footer-form-btn {
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	text-align: center;
 	font-weight: 500;
 	letter-spacing: 0.04em;
-	max-width: 165px;
+	min-width: 165px;
 	height: 40px;
 	padding: 8px 24px;
-	gap: 16px;
+
+	font-family: Roboto;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 0.04em;
 
 	border: none;
 	border-radius: 4px;
@@ -624,12 +640,13 @@ img {
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-footer:focus,
-.btn-footer:hover {
+.footer-form-btn:focus,
+.footer-form-btn:hover {
 	background-color: #404bbf;
 }
 
-.footer-icon {
+.footer-form-icon {
+	margin-left: 16px;
 	fill: #ffffff;
 }
 
@@ -647,10 +664,10 @@ img {
 	pointer-events: none;
 }
 
-.backdrop.is-open {
+/* .backdrop.is-open {
 	opacity: 1;
 	pointer-events: all;
-}
+} */
 
 .form {
 	position: absolute;
