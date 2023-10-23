@@ -474,7 +474,7 @@ section {
 	color: #f4f4fd;
 }
 
-/* FOOTER============================================ */
+/* !FOOTER============================================ */
 
 .footer-link {
 	font-family: "Raleway", sans-serif;
@@ -635,7 +635,7 @@ section {
 	fill: #ffffff;
 }
 
-/* MODAL============================================ */
+/* !MODAL============================================ */
 
 .backdrop {
 	position: fixed;
@@ -648,12 +648,14 @@ section {
 	background: rgba(46, 47, 66, 0.4);
 	opacity: 0;
 	pointer-events: none;
+	visibility: hidden;
 }
 
-/* .backdrop.is-open {
+.backdrop.is-open {
 	opacity: 1;
-	pointer-events: all;
-} */
+	pointer-events: auto;
+	visibility: visible;
+}
 
 .modal-box {
 	position: absolute;
