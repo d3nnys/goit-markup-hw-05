@@ -665,10 +665,10 @@ img {
 	pointer-events: none;
 }
 
-.backdrop.is-open {
+/* .backdrop.is-open {
 	opacity: 1;
 	pointer-events: all;
-}
+} */
 
 .modal-box {
 	position: absolute;
